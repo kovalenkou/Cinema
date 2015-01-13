@@ -1,0 +1,27 @@
+﻿<Window x:Class="CinemaProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cinema Project by yurKO" Height="400" Width="585.5" Loaded="Window_Loaded_1" SizeToContent="WidthAndHeight">
+    <Grid x:Name="mwGrid">
+        <ComboBox x:Name="cbSessions" HorizontalAlignment="Left" Margin="87,40,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbSessions_SelectionChanged"/>
+        <ComboBox x:Name="cbHalls" HorizontalAlignment="Left" Margin="307,10,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="cbHalls_SelectionChanged"/>
+        <ComboBox x:Name="cbFilms" HorizontalAlignment="Left" Margin="307,40,0,0" VerticalAlignment="Top" Width="120"/>
+        <TextBlock x:Name="tblSessions" HorizontalAlignment="Left" Margin="10,40,0,0" TextWrapping="Wrap" Height="20" Width="62" TextAlignment="Center" VerticalAlignment="Top"><Run Language="ru-ru" Text="Сеанс"/></TextBlock>
+        <TextBlock x:Name="tblHalls" HorizontalAlignment="Left" Margin="240,10,0,0" TextWrapping="Wrap" Height="20" Width="62" TextAlignment="Center" VerticalAlignment="Top" Text="Зал"/>
+        <TextBlock x:Name="tblFilms" HorizontalAlignment="Left" Margin="226,40,0,0" TextWrapping="Wrap" Height="20" Width="76" TextAlignment="Center" VerticalAlignment="Top" Text="Фильм"/>
+        <Grid x:Name="grid" Margin="10,60,0,10" HorizontalAlignment="Left" VerticalAlignment="Top" ShowGridLines="True"/>
+        <Button x:Name="btZvit" Content="Отчет о&#xD;&#xA;продаже" HorizontalAlignment="Left" Margin="482,10,0,0" VerticalAlignment="Top" Width="70" Click="btZvit_Click" Height="52">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="#FFF3F3F3"/>
+                    <GradientStop Color="#FFEBEBEB" Offset="1"/>
+                    <GradientStop Color="#FFDDDDDD" Offset="0.954"/>
+                    <GradientStop Color="#FF16C8E4" Offset="0.167"/>
+                    <GradientStop Color="#FE45E277" Offset="0.862"/>
+                </LinearGradientBrush>
+            </Button.Background>
+        </Button>
+        <TextBlock x:Name="tbDate" HorizontalAlignment="Left" Margin="0,10,0,0" TextWrapping="Wrap" Height="20" Width="100" TextAlignment="Center" VerticalAlignment="Top" Text="Дата сеанса"/>
+        <DatePicker x:Name="dpDate" HorizontalAlignment="Left" Margin="105,10,0,0" VerticalAlignment="Top" SelectedDateChanged="dpDate_SelectedDateChanged"/>
+    </Grid>
+</Window>
